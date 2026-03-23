@@ -1,55 +1,47 @@
 # ==========================================
-# 1. Data & Models
+# 1. Data & Models Structure
 # ==========================================
-# Ignore the entire data folder so you don't upload ADIA Lab datasets
-data/
-data/raw/
-data/processed/
+# Ignore contents, but keep directory structure
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
 
-# Just in case you leave a data file lying around outside the folder
+# Just in case heavy files are left outside
 *.csv
 *.parquet
 *.h5
 *.hdf5
-
-# Ignore heavy saved models
 *.pkl
 *.joblib
 *.pt
 *.pth
+*.model
 
 # ==========================================
 # 2. Python & Environments
 # ==========================================
-# Automatically generated compiled Python files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Virtual environments (NEVER upload these)
 venv/
 env/
 .venv/
 .conda/
-
-# Environment variables files (where you would store passwords or API keys)
 .env
 
 # ==========================================
-# 3. Jupyter Notebooks
+# 3. Jupyter Notebooks & ML Logs
 # ==========================================
-# Automatic save points for notebooks
 .ipynb_checkpoints/
+catboost_info/
+*.log
 
 # ==========================================
-# 4. IDE (Visual Studio Code)
+# 4. IDE & OS
 # ==========================================
-# Local VS Code settings that shouldn't be shared
 .vscode/
-
-# ==========================================
-# 5. OS Generated Files
-# ==========================================
-# Hidden Mac and Windows files
 .DS_Store
 Thumbs.db
