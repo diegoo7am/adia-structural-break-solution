@@ -2,7 +2,7 @@
 
 This repository contains the complete solution for the ADIA Lab Structural Break Open Benchmark Challenge. The objective is to detect structural breaks in multi-domain time series, encompassing financial markets, climate data, biometrics, and industrial sensors.
 
-**🏆 Final Performance:** * **5-Fold Cross-Validation (ROC AUC):** 0.7967
+**🏆 Final Performance:** **5-Fold Cross-Validation (ROC AUC):** 0.7967
 * **Out-of-Sample Test (ROC AUC):** 0.7678
 
 ## 🧠 Architecture and Methodology
