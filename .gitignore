@@ -9,6 +9,7 @@ data/processed/*
 models/*
 !models/.gitkeep
 discarded_experiments
+docs/
 
 # Just in case heavy files are left outside
 *.csv
