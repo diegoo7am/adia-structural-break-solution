@@ -69,19 +69,15 @@ A soft-voting ensemble of three gradient-boosted tree models, all with `scale_po
 
 ## Pipeline
 
-```text
-raw series (id, time, value, period)
-        │
-        ├── tsfresh on pre / post / full ───────┐
-        ├── post–pre differences and ratios ────┤
-        ├── tsfresh on cumulative sums ─────────┼──► Top 75 features
-        └── HMM regime scanner ─────────────────┘           │
-                                                            ▼
-                                     XGBoost + LightGBM + CatBoost
-                                            (soft voting)
-                                                            │
-                                                            ▼
-                                             P(structural break)
+```mermaid
+flowchart LR
+    A["Raw series<br/>(id, time, value, period)"] --> B["tsfresh<br/>pre / post / full"]
+    A --> C["Post–pre<br/>differences & ratios"]
+    A --> D["tsfresh on<br/>cumulative sums"]
+    A --> E["HMM regime<br/>scanner"]
+    B & C & D & E --> F["Top 75<br/>features"]
+    F --> G["XGBoost + LightGBM + CatBoost<br/>(soft voting)"]
+    G --> H["P(structural break)"]
 ```
 
 ## Repository structure
